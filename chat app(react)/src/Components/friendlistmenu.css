@@ -1,0 +1,57 @@
+.btn.fa.fa-chevron-right {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.card.friendmenu {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.mydropdown-menu {
+    top:0;
+    left: 115px;
+}
+
+.hideme{
+    display: block;
+    opacity: 0;
+    transition: 0.2s;
+}
+.hideme2{
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+.showme2 {
+    display: block;
+    transition: 2s;
+    
+}
+.showme{
+    display: inline;
+    opacity:1;
+    transition: 1s;
+}
+
+.fa-angle-left{
+    width: 15px; 
+    transform: rotate(0deg);
+    transition: 0.6s;
+    cursor: pointer
+}
+
+.fa-angle-left.myarrow {
+    transform: rotate(-180deg);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.fa-angle-left:hover{
+    color: #aaa;
+    text-shadow: 0px 1px 2px #111, 1px 0px 2px #111;
+}
+
+a.fa {
+    cursor: pointer;
+}

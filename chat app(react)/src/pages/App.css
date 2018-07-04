@@ -1,0 +1,267 @@
+.givetopmargin {
+    display: block;
+    margin-top: 44px;
+    width: 100%;
+    padding: 0;
+}
+
+.edgetoedge {
+    width:100%;
+    overflow-x: hidden;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.lefttopfixedcol{
+    position: fixed;
+    left: 0;
+    top: 56px;
+    width: 22.5vw;
+}
+.righttopfixedcol-small{
+    position: fixed;
+    right: 0px;
+    top: 56px;
+    width: 65px;
+    transition: 1s;
+}
+.righttopfixedcol{
+    position: fixed;
+    right: 0;
+    top: 56px;
+    width: 140px;
+    transition: 0.4s;
+}
+
+.mypostcol2{
+    margin: 5px 20px 0 5px;
+    padding-top: 5px;
+    margin: auto;
+}
+
+
+
+div.myfriendblock{
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 33.2vw;
+    top:50px;
+    left:0;
+    position: fixed;
+}
+
+div.card.leftborderzero {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.fa-spin {
+    animation-duration: 1s;
+}
+div.dividline{
+    position: fixed;
+    top:0;
+    left: 33.2vw;
+    height: 100vh;
+}
+
+div.bgdark {
+    box-shadow: 0 0 0 !important;
+    background: #333 !important;
+    color: #eee;
+}
+
+.imgcontainer{
+    height:300px;
+    overflow:hidden;
+    z-index: 0;
+}
+
+div.card.userdetailpage {
+    overflow: visible;
+}
+
+.usercontainer{
+    width:100%;
+    height: 150px;
+    position: absolute;
+    top:-124px;
+    display:inline-block;
+    
+}
+.userimagecontainer{
+    height: 138px;
+    width: 138px;
+    display: inline-block;
+    margin-left: 40px;
+    background: #eee;
+    border: 4px solid #fff;
+}
+.usernamecontainer{
+    position: absolute;
+/*    margin-bottom: 60px;*/
+    margin-left: 20px;
+    bottom: 15px;
+    color:#111;
+    display: inline-block;
+    font-size: 2.5rem;
+}
+
+.addfriendbutton{
+    position: absolute;
+    bottom: 45px;
+    right: 27px;
+}
+
+div.bggraydark {
+    background-color: #ddd !important;
+}
+
+.settingform input {
+    display: inline-block;
+/*    position: absolute;*/
+    margin: 0;
+    margin-left: auto;
+/*    margin-right: 120px;*/
+    width: 300px;
+}
+
+.settingform lable,.settingform a{
+    display: block;
+    margin: 12px 2px;
+}
+.settingform a {
+    margin-left: auto;
+    height: 1.2em;
+    width:40px;
+}
+.settingform input.file{
+    background-color: #ddd;
+    border: 0;
+}
+
+.imgbox {
+    display: block;
+    width: 100%;
+    height:auto;
+    margin: auto;
+}
+
+div.imagecontainer{
+    height: 140px;
+}
+
+a.lablepreview{
+    width: 70px;
+    margin-top: 3px;
+    margin-left: auto;
+}
+
+.mypencilicon{
+    position: absolute;
+    overflow: hidden;
+    width: 30px !important;
+    height: 20px !important;
+    top: 2px;
+    right:0px;
+    font-size: 20px;
+}
+.myimageuser{
+    display: block;
+}
+
+.mt-4.d-block.btngroup {
+    width:155px;
+}
+
+lable {
+    margin-left: 2px;
+}
+.myimguser{
+    margin-left: auto;
+    display: block;
+    border: 3px solid #fff;
+    max-width: 100px;
+}
+
+@media screen and (min-width: 769px){
+    .col-sm-5.mysettingcol{
+        padding-left: 2px;
+    }
+    .col-sm-3.mysettingcol{
+/*        padding-left: 2px;*/
+        padding-right: 2px;
+    }
+    .settingform input.form-control{
+        width: 120%;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .settingform input {
+        width: 140%;
+    }
+}
+@media screen and (max-width: 575px){
+     .settingform input.form-control{
+        width:100%;
+    }
+    
+    div.imgcontainer{
+        height:10%;
+        margin-bottom: -25px;
+    }
+    
+    .myimguser{
+        margin-left: 0;
+    }
+    a.lablepreview {
+        margin-left: 24px;
+    }
+    .mypencilicon{
+        left: 96px;
+        right:auto;
+    }
+}
+
+@media screen and (max-width: 767px){
+    
+    .usercontainer{
+        top: -70px;
+        height: 75px;
+        left:0;
+    }
+    .userimagecontainer{
+        height: 80px;
+        width: 80px;
+    }
+    .usernamecontainer{
+        bottom:10px;
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+    .addfriendbutton{
+        bottom:30px;
+    }
+    .righttopfixedcol-small{
+        position: fixed;
+        right: 0;
+        top: 56px;
+        width: 45px;
+        transition: 1s;
+    }
+    .imgcontainer{
+        height:200px;
+        min-height: 100px;
+        overflow:hidden;
+    }
+    .myimguser{
+/*        height: 50% !important;*/
+        width: 50% !important;
+    }
+}

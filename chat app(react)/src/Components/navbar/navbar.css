@@ -1,0 +1,191 @@
+nav.mycontainer {
+    top:0;
+    left: 0;
+    position: fixed;
+    background-color: #333;
+    width: 100%;
+    z-index: 100;
+    margin: 0;
+    padding: 3px 5px 3px 5px;
+}
+
+ul.ul-list {
+    list-style: none;
+    padding:0;
+    margin: 0;
+    display: inline;
+}
+
+li.list-item {
+    display: inline-block;
+    color: #aaa;
+    padding:3px 5px;
+    margin: 5px 5px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+li.list-item:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+li.list-item.showinmobile {
+    display: none;
+}
+
+div.showinmobile {
+    display: none;
+}
+
+li.searchbar{
+/*    margin-top: 15px;*/
+    width: 28%;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+.ul-list.hidden-sm-down.d-inline-block{
+    float:right;
+    color:#aaa;
+}
+.mylistitem{
+    margin-right: 15px;
+    margin-top: 3px;
+    display: inline-block;
+}
+
+
+.dropdown-menu{
+    left: auto;
+    top: 36px;
+    right: 0;
+    background: #333;
+    color: #aaa;
+    padding-left: 15px;
+}
+
+.menu-item {
+    color:#aaa;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+        color: #fff;
+        text-decoration: none;
+
+}
+
+.menu-item.sign-out{
+    text-decoration: none;
+}
+.menu-item.sign-out:hover{
+        color: red;
+}
+
+.commentresize {
+    font-size: 1.2rem;
+}
+
+/*################# menu button icon ###################*/
+
+
+.bar1,.bar2,.bar3 {
+    height: 3px;
+    width: 30px;
+    background: #aaa;
+    margin: 5px 1px;
+    transition: 0.4s;
+}
+
+
+
+.bar1.change {
+    transform: rotate(-45deg) translate(-5px,7px);
+    transition: 0.5s;
+}
+.bar2.change {
+    opacity: 0;
+    transition: 0.5s;
+}
+.bar3.change {
+    transform: rotate(45deg) translate(-4px,-7px);
+    transition: 0.5s;
+}
+
+/*################# menu button icon ###################*/
+
+
+
+
+@media screen and (max-width:767px){
+    li.list-item.showinmobile{
+        display: inline-block;
+        position:absolute;
+        top:0px;
+        right: 5px;
+    }
+    div.showinmobile {
+        display: block;
+    }
+    div.sidenavbar {
+        color: #aaa;
+        max-width: 0;
+        height: 100%;
+        background: #333;
+        display: block;
+        position:fixed;
+        top:44px;
+        right:0px;
+        z-index: 100;
+        transition: .5s;
+    }
+    div.sidenavbar.change {
+        max-width: 300px;
+        width: 70%;
+        transition: .8s;
+    }
+    
+    img.userphotoinsidenavbar{
+        border-radius: 50%;
+        overflow: hidden;
+    }
+   
+    .img-containerforuser{
+        padding-left: 15px;
+        min-width: 200px;
+        height: 60px;
+        overflow: hidden;
+    }
+    
+    .sidenavbar-container{
+        padding-left: 15px;
+        min-width: 200px;
+        overflow: hidden;
+    }
+    
+    .fa.fa-cog.mycog{
+        font-size: 18px;
+        margin-top: 2px;
+    }
+    li.menu-item {
+        padding:2px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    
+    input.search.form-control {
+        height:35px;
+    }
+    
+    button.search.btn.btn-primary {
+        height:35px;
+    }
+
+    .menu-item,.menu-item.exception div {
+        font-size: 20px;
+    }
+}

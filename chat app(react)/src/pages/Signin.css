@@ -1,0 +1,194 @@
+body {
+    background: #0066cc;
+    background: linear-gradient(to right,#0066cc,#0080ff);
+    width: 100%;
+    right:0;
+}
+
+div.first {
+    overflow: hidden;
+}
+.signin-container{
+    margin-bottom: 10%;
+}
+.signup-container{
+    margin-bottom: 6%;
+}
+
+.row.second {
+    margin-top: 15px;
+}
+
+div.text-center.gray {
+    color: gray;
+}
+
+.makeitlink{
+    text-decoration:underline;
+    color: #007c9a;
+}
+
+.mysignincardmod{
+    border-radius: 10px;
+}
+
+loginbtn.btn.d-inline-block{
+    display: inline-block;
+    width: 51%;
+}
+.card.m-1.p-0{
+    overflow: hidden;
+    border-radius: 8px;
+}
+div.mysignin-card {
+    margin: auto!important;
+    max-width: 430px;
+    margin-bottom: 10px;
+}
+
+.resetopacity {
+    opacity:1;
+}
+
+.page-item.icon {
+    background: blue;
+}
+
+.page-link.icon {
+    padding:2px 0;
+}
+
+div.card {
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(4,4,4,0.5);
+    background: #f8f8f8;
+    overflow: hidden;
+}
+
+div.card.signin {
+    padding-bottom: 0;
+}
+
+a.textwhite{
+    color: #e7e7e7;
+}
+h3.text-center{
+/*    font-weight: 100 !important;*/
+/*    margin-top: 60px;*/
+/*    position: relative;*/
+/*    top:-20px;*/
+    color: #006f8a;
+    margin-bottom: 0px;
+}
+
+.fa.fa-user, .fa.fa-lock{
+    font-size: 18px;
+}
+
+.fa.fa-lock {
+    padding-left: 1px;
+}
+
+.input-group-addon{
+/*    padding: 0 10px;*/
+    height: 38px;
+}
+
+.signininput{
+    margin: 0 !important;
+    height:42px;
+}
+
+.mylogocontainer {
+    margin-bottom: 15px;
+}
+
+.footeroflogincard{
+    margin: 15px 0 18px 0;
+    font-size: 1.2rem;
+    font-weight:200;
+    color: #555;
+    text-align: center;
+}
+
+.cardfooter{
+/*    border-top: 1px solid #ddd;*/
+    background: #e6e6e6;
+    margin-top: 15px;
+    margin-left: -21px;
+    width: 112%;
+    cursor: pointer;
+}
+
+.cardfooter:hover{
+    background: #ededed;
+}
+
+.hrline {
+    width: 100%;
+    background: #eee;
+    margin: auto;
+/*    margin-left: -21px;*/
+/*    left: 0;*/
+}
+
+.alert {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.form-control.logo{
+    width: 30px;
+}
+
+.d-block.bordercircle{
+/*    border-radius: 50%;*/
+    overflow: hidden;
+    height: 100px;
+}
+.loginbtnmenu{
+    height: 42px;
+}
+
+.form-control {
+    margin: 8px 3px;
+    background: #fdfdfd;
+    border-radius:5px;
+}
+
+.form-check {
+    margin-bottom: 15px;
+}
+
+.text-danger {
+    margin-bottom: 20px;
+}
+
+button.loginbtn {
+    display: block;
+    width: 50%;
+    min-height: 41px;
+    font-size: 1.2rem;
+    font-weight: 100 !important;
+    border-radius: 2px !important;
+    margin-top: 20px !important;
+}
+
+.fa-facebook-official {
+    color: #11f
+}
+
+.fa-google {
+    color: #f22;
+}
+.fa-github {
+    color: black;
+}
+
+@media screen and (max-width:574px){
+    .signin-container{
+    margin-bottom: 8vh;
+}
+}
+
+
