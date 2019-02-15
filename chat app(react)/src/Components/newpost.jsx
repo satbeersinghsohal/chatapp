@@ -1,6 +1,6 @@
 import React, {Component} from 'react' ;
 import httpservice from '../service/http-service';
-import {firebaseApp,storage} from '../firebase.js';
+import {storage} from '../firebase.js';
 
 const http = new httpservice();
 
@@ -28,10 +28,11 @@ class Newpost extends Component{
                 var metadata = {
                   contentType: 'image/jpeg'
                 };
-
-                var uploadTask = storageRef.child('images/'+this.props.userid +'/'+d+'/'+'postimage.jpg').put(file, metadata);
+// eslint-disable-next-line
+                var storeurl = 'images/'+this.props.userid +'/'+d+'/'+'postimage.jpg';
+                storageRef.child(storeurl).put(file, metadata);
                 let self = this;
-                storageRef.child('images/'+this.props.userid +'/'+d+'/'+'postimage.jpg').getDownloadURL().then(function(url) {
+                storageRef.child(storeurl).getDownloadURL().then(function(url) {
 
                     self.savefile(url)
                     console.log("url",url)
@@ -98,14 +99,14 @@ class Newpost extends Component{
                                   <div className="tab-pane active" id="home" role="tabpanel">
                                         <textarea className="form-control" value={this.state.empty} onChange={event=>
                                        this.setState({text: event.target.value})} required></textarea>
-                                        <button className="btn btn-primary d-block mt-1 ml-auto" onClick={()=> this.uploadfile()}>Post</button>
+                                        <button className="btn btn-primary d-block mt-1 ml-auto" onClick={() => this.uploadfile()}>Post</button>
                                     </div>
                                   <div className="tab-pane" id="profile" role="tabpanel">
-                                    <form className="form" encType="multipart/form-data" onSubmit={event=> event.preventDefault()}>
+                                    <form className="form" encType="multipart/form-data" onSubmit={event => event.preventDefault()}>
                                         <textarea className="form-control" value={this.state.empty} onChange={event=>
                                        this.setState({text: event.target.value})} required></textarea>
                                         <input name="sampleFile" value={this.state.empty} type="file" onChange={event=> this.setState({image: event.target.files[0]})} ></input>
-                                        <button className="btn btn-primary d-block mt-1 ml-auto" onClick={()=> this.uploadfile()}>Post</button>
+                                        <button className="btn btn-primary d-block mt-1 ml-auto" onClick={() => this.uploadfile()}>Post</button>
                                       </form>
                                     </div>
                                 </div>

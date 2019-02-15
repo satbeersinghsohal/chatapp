@@ -104,16 +104,16 @@ li.searchbar{
 
 
 .bar1.change {
-    transform: rotate(-45deg) translate(-5px,7px);
-    transition: 0.5s;
+    transform: rotate(-45deg) translate(-6px,7px);
+    transition: 0.3s;
 }
 .bar2.change {
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .bar3.change {
     transform: rotate(45deg) translate(-4px,-7px);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 /*################# menu button icon ###################*/

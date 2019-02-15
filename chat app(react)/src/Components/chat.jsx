@@ -30,7 +30,7 @@ class Chat extends Component {
                     <h3>chat app</h3>
                     <hr className='hr'/>
                     <ul className="ul">
-                        <li className="li chattinglist-item" onClick={()=> this.props.toggle(this.state.friendlist)}>Chatting{(this.props.counter ===0)? null:(<sup className="mysuperscript">{this.props.counter}</sup>)}</li>
+                        <li className="li chattinglist-item" onClick={() => this.props.toggle(this.state.friendlist)}>Chatting{(this.props.counter ===0)? null:(<sup className="mysuperscript">{this.props.counter}</sup>)}</li>
                         <li className="li">News</li>
                         <li className="li">Games</li>
                         <li className="li"><Link className="li" to="/setting">Setting</Link></li>

@@ -2,7 +2,7 @@ import 'whatwg-fetch';
 //import {BASE_URL} from '../constants';
 
 const BASE_URL = "https://chatapp-3.herokuapp.com/api"
-//const BASE_URL = "http://localhost:5000/api" ;
+// const BASE_URL = "http://localhost:5000/api" ;
 
 class httpservice {
     createuser = (email,username,userid,photo) => {

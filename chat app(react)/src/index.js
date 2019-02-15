@@ -10,7 +10,7 @@ import SignIn from './pages/Signin';
 import SignUp from './pages/Signup';
 import Setting from './pages/settings';
 import Userpage from './pages/userpage';
-import {bake_cookie,read_cookie} from 'sfcookies';
+import {read_cookie} from 'sfcookies';
 
 
 var userlog = read_cookie('user');

@@ -30,6 +30,7 @@ class App extends Component {
     
     toggle(data){
         if(this.state.chatboxstatus === 'chatboxhide'){
+            console.log("sddd");
             this.setState({chatboxstatus:'chatboxshow',friendlist:data})
         }else{
             this.setState({chatboxstatus:'chatboxhide'})

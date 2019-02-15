@@ -17,8 +17,9 @@ class Menubar extends React.Component {
             messages:[],
             counter:[]
         }
-        this.scrolltobottom = this.scrolltobottom.bind(this)
+        this.scrolltobottom = this.scrolltobottom.bind(this);
         setInterval(this.getmsg(),2000);
+        console.log("test");
     }
     
     togglechattingscreen(user){
@@ -42,6 +43,8 @@ class Menubar extends React.Component {
         }
     }
     componentDidMount(){
+        console.log("test");
+
         var messages = read_cookie('messages');
         this.setState({messages})
         
@@ -157,11 +160,11 @@ class Menubar extends React.Component {
             return null;
         }
     }
-    friendlist2 =()=>{
+    friendlist2 =() =>{
         if(this.props.friendlist){
             const list = this.props.friendlist.map(obj=>
             <div key={obj.userid}>
-                <div style={{height:60+'px'}} onClick={()=>this.togglechattingscreen(obj)}>
+                <div style={{height:60+'px'}} onClick={() =>this.togglechattingscreen(obj)}>
                     <img src={obj.photo} width="50px" alt={obj.username} ></img>
                     <a>{obj.username}</a>
                     {this.getfriendmsgcounter(obj.userid)}
@@ -178,7 +181,7 @@ class Menubar extends React.Component {
             <div className={this.props.chatboxstate}>
                 {
                     (!this.state.togglechattingscreen)?(<div className={"card bgdark "+!this.state.togglechattingscreen}>
-                    <i className="fa fa-thin-cross fa-2x d-block ml-auto hidden-md-down" onClick={()=>this.props.toggle()}></i>
+                    <i className="fa fa-thin-cross fa-2x d-block ml-auto" onClick={() =>this.props.toggle()}></i>
                     <div className="mt-2">
                         {
                             this.friendlist2()
@@ -189,8 +192,8 @@ class Menubar extends React.Component {
                 :  
                 (
                 <div className={"card bgdark "+this.state.togglechattingscreen}>
-                    <i className="fa fa-thin-cross fa-2x d-block ml-auto" onClick={()=>this.props.toggle()}></i>
-                    <i className="fa fa-arrow-left d-block mr-auto" onClick={()=>this.togglechattingscreen('sdfsdf')}></i>
+                    <i className="fa fa-thin-cross fa-2x d-block ml-auto" onClick={() =>this.props.toggle()}></i>
+                    <i className="fa fa-arrow-left d-block mr-auto" onClick={() =>this.togglechattingscreen('sdfsdf')}></i>
                     <div className="chatuserphoto">
                         <img src={this.state.currentfriend.photo} width="50px" height="50px" className="d-inline" alt="friendphoto"></img>
                         <p className="d-inline">{this.state.currentfriend.username}</p>
@@ -205,7 +208,7 @@ class Menubar extends React.Component {
                             }
                             <div>
                             <input id="inputmsg" className="form-control myinputfield msg" onChange={event=>this.setState({msg:event.target.value})}/>
-                            <button className="btn btn-primary mysendbtn" onClick={()=> this.sendmsg()}>Send</button>
+                            <button className="btn btn-primary mysendbtn" onClick={() => this.sendmsg()}>Send</button>
                             </div>
                         </div>
                     </div>

@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var db = mongoose.connect('');
+var db = mongoose.connect('mongodb://localhost:27017/chatapp');
 var fs = require('fs');
 var fileUpload = require('express-fileupload')
 const mypath = require('path');
@@ -279,10 +279,12 @@ app.get('/api/posts',function(req, res){
     var userid = req.query.userid;
     var postaddress = req.query.postaddress;
     var comment = req.query.comment;
+    console.log("in api post");
     
     if(comment != "empty" && postaddress !== undefined && userid!== undefined && comment !== undefined){
         
         Users.findOne({userid},function(err,userdata){
+            console.log("finddding data");
             if(userdata){
                 var data = {username: userdata.username, userid: userdata.userid, photo: userdata.photo,'text':comment};
                 
@@ -345,6 +347,7 @@ app.get('/api/posts',function(req, res){
     }
     else if(userid)
     {
+        console.log("getting userdata");
         Users.find({userid}).populate({path:'posts', model:'Posts'}).exec(function(err, data){
 //            console.log(data)
             if(err || !data[0]){
@@ -450,7 +453,12 @@ app.get('/*', function (req, res) {
 
 
 var server = app.listen(process.env.PORT || 5000, function() {
-    console.log("Server is running on 3004" + process.env.PORT);
+    if(process.env.PORT){
+     console.log("Server is running on localhost"+process.env.PORT);
+}else{
+    console.log("Server is running on localhost:5000");
+
+}
 })
 
 var io = require('socket.io')(server);

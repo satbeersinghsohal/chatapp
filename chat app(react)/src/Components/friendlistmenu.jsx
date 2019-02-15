@@ -19,7 +19,7 @@ class Frindlistblock extends Component {
         this.loaddata = this.loaddata.bind(this);
         this.loaddata();
     }
-    loaddata =()=>{
+    loaddata = () =>{
         http.loadfriend(this.props.userid).then(data=>{
 //            console.log('friends data',data.friends)
             if(data && data.length !== 0 && data.error !=='could not fetch friendlist'){
@@ -50,8 +50,8 @@ class Frindlistblock extends Component {
             <div className={this.state.hidden2}>
                 <div className="container p-0">
                     <div className="card friendmenu p-0 hidden-md-up">
-                        <i onClick={()=>this.togglehiddenstate()} className={this.state.hidden3}></i>
-                        <div className={this.state.hidden4}>
+                        <i onClick={() => this.togglehiddenstate()} className={this.state.hidden3}></i>
+                        <div className = {this.state.hidden4}>
                             <div className="this.state.hidden">
                                 {
                                     this.list()
@@ -60,7 +60,7 @@ class Frindlistblock extends Component {
                         </div>
                     </div>
                     <div className="card friendmenu p-0 hidden-sm-down" >
-                        <i onClick={()=>this.togglehiddenstate()} className={this.state.hidden3}></i>
+                        <i onClick={() => this.togglehiddenstate()} className={this.state.hidden3}></i>
                         {
                             this.list()
                         }

@@ -70,7 +70,7 @@ class App extends Component {
           contentType: 'image/jpeg'
         };
         
-        var uploadTask = storageRef.child('images/'+this.state.userid +'/userimage.jpg' ).put(file, metadata);
+        storageRef.child('images/'+this.state.userid +'/userimage.jpg' ).put(file, metadata);
         let self = this;
         storageRef.child('images/'+this.state.userid +'/userimage.jpg' ).getDownloadURL().then(function(url) {
           
